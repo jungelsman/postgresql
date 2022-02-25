@@ -3,7 +3,7 @@ name: Makefile CI
 on:
   workflow_dispatch:
 env:
-  Greeting: "Hi Glen"
+  Greeting: ${{ secrets.GREETING }}
       
 jobs:
   build:
