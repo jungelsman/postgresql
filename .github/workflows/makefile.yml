@@ -1,17 +1,19 @@
 name: Makefile CI
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
+env:
+  Greeting: "Hi Glen"
+      
 jobs:
   build:
 
     runs-on: [self-hosted]
 
     steps:
+    - name: Print Hi
+      run: echo "$Greeting, have a great build"
+      
     - uses: actions/checkout@v2
     
     - name: configure
