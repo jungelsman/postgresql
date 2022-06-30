@@ -2,8 +2,8 @@ name: Testing
 on:
   workflow_dispatch:
 env:
-  KEY_ID: ${{ secrets.FF_KEY_ID }}
-  ISSUER_ID: ${{ secrets.FF_ISSUER_ID }}
+  SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+  SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
 jobs:
   build:
     name: Send message to slack
