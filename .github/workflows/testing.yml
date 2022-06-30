@@ -1,1 +1,21 @@
+name: CI-Flutter-Build
+on:
+  workflow_dispatch:
+env:
+  KEY_ID: ${{ secrets.FF_KEY_ID }}
+  ISSUER_ID: ${{ secrets.FF_ISSUER_ID }}
+jobs:
+  build:
+    name: Send message to slack
+    runs-on: [self-hosted]
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Pre-build
+        run: |
+          echo "Entering pre-build stage"
+          echo "Sending slack message"
+          curl -d "text=Pre-build has started" -d "channel=${SLACK_CHANNEL}" -H "Authorization: Bearer ${SLACK_TOKEN}" -X POST https://slack.com/api/chat.postMessage
+
+
 
