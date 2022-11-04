@@ -39,4 +39,4 @@ jobs:
         JF_ACCESS_TOKEN: ${{ secrets.JF_TOKEN }}
       run: |
         jf --version
-        jf ping
+        jf rt ping
