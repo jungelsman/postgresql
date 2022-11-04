@@ -23,4 +23,3 @@ jobs:
       run: make
       
     - name: Install Jfrog CLI
-      uses: jfrog/setup-jfrog-cli@v3
