@@ -23,13 +23,8 @@ jobs:
       run: make
       
     - name: Install Jfrog CLI
-    - uses: jfrog/setup-jfrog-cli@v3
-      env:
-          # JFrog platform url (for example: https://acme.jfrog.io) 
-          JF_URL: "https://www.yahoo.com"
+      uses: jfrog/setup-jfrog-cli@v3
     
-          # Basic authentication credentials
-          JF_USER: "jungelsman@hotmail.com"
-          JF_PASSWORD: "password"
-    - run: |
+    - name: Check JFrog CLI Version
+      run: |
         jf --version
