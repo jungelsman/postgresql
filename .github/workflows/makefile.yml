@@ -21,3 +21,7 @@ jobs:
       
     - name: Install dependencies
       run: make
+      
+    - name: Install Jfrog CLI
+    - uses: jfrog/setup-jfrog-cli@v3
+    - run: jf --version
