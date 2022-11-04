@@ -39,5 +39,4 @@ jobs:
         JF_ACCESS_TOKEN: ${{ secrets.JF_TOKEN }}
       run: |
         jf --version
-        jf c use setup-jfrog-cli-server
-        jf rt ping
+        jf rt ping --url=JF_URL
