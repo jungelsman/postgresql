@@ -17,10 +17,18 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: configure
-      run: ./configure --with-selinux
+      run: ./configure --with-selinux --prefix $(pwd)/install
       
-    - name: Install dependencies
+    - name: Make
       run: make
+      
+    - name: Make Install
+      run: make install
+      
+    - name: Create Zip file
+      run: |
+        cd $(pwd)/install
+        zip -r something.zip ./bin ./lib ./include ./share
       
     - name: Install Jfrog CLI
       uses: jfrog/setup-jfrog-cli@v3
