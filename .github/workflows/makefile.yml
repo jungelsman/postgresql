@@ -40,5 +40,5 @@ jobs:
       run: |
         jf --version
         jf rt ping --url=$JF_URL
-        jf rt u --url=$JF_URL --accces-token=$JF_ACCESS_TOKEN "*.zip" my-local-repo
+        jf rt u --url=$JF_URL --access-token=$JF_ACCESS_TOKEN "*.zip" my-local-repo
     
