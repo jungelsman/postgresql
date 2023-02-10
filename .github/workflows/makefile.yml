@@ -20,7 +20,7 @@ jobs:
       run: ./configure --with-selinux --prefix $(pwd)/install
       
     - name: Make
-      run: make
+      run: make -j4
       
     - name: Make Install
       run: make install
